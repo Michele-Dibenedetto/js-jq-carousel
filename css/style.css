@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    position: relative;
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.prev,
+.next {
+    font-size: 40px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.images {
+    display: inline-block;
+    vertical-align: middle;
+}
+img {
+    display: none;
+    width: 800px;
+    height: 500px;
+}
+img.active {
+    display: inline-block;
+}
+
+.point {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background: rgba(0, 0, 0,.7);
+    border-radius: 30px;
+
+}
+.point i {
+    margin: 0 20px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+.point i.active {
+    color: blue;
+}
