@@ -1,5 +1,20 @@
 // aspetto che la pagina sia completamente caricata prima di far eseguire il mio js
 $(document).ready(function() {
+
+    // creo una variabile che fungera da arrey dove inserire tutte le immagini
+    var immagini = document.getElementsByTagName("img");
+    var point;
+    // creo un ciclo per creare tanti pallini quente sono le immagini
+    for (i=0; i < immagini.length; i++) {
+        if (i==0) {
+            point += document.getElementById("prova").innerHTML += "<i class='fas fa-circle active first'>" + "</i>"; 
+        } else if (i==immagini.length - 1) {
+            point += document.getElementById("prova").innerHTML += "<i class='fas fa-circle last'>" + "</i>";
+        } else {
+            point += document.getElementById("prova").innerHTML += "<i class='fas fa-circle'>" + "</i>";
+        }
+    }
+
     // aggiungo un evento al click dell'elemento che ha come classe .next
     $(".next").click(function() {
         // attribuisco alla variabile l'immagine e il point che ha come classe active
@@ -33,4 +48,10 @@ $(document).ready(function() {
             circleBack.prev("i").addClass("active");
         }
     })
+
+    // $(".fa-circle").click(function() {
+    //     $("i.active").removeClass("active");
+    //     $(this).addClass("active");
+    // })
+    // console.log($("img")[1]);
 })
